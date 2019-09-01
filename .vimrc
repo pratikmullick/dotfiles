@@ -18,13 +18,13 @@ endif
 
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
-    colorscheme blandon
+    colorscheme default
     set guioptions -=T  "Disables the toolbar
     set backspace=indent,eol,start
     if g:os == "Windows"
         set guifont=Consolas:h14:cANSI 
     elseif g:os == "Linux"
-        set guifont=Fira\ Code\ 12
+        set guifont=Hack 12
     endif
 end
 
