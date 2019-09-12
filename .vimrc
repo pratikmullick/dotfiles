@@ -24,7 +24,11 @@ if has("gui_running")
     if g:os == "Windows"
         set guifont=Consolas:h14:cANSI 
     elseif g:os == "Linux"
+<<<<<<< HEAD
         set guifont=Fira\ Code\ 12
+=======
+        set guifont=Hack\ 12
+>>>>>>> ed7f951f76ac32561d815560676e0e19d91e4462
     endif
 end
 
