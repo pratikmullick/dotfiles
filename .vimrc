@@ -18,13 +18,13 @@ endif
 
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
-    colorscheme default
+    colorscheme blandon
     set guioptions -=T  "Disables the toolbar
     set backspace=indent,eol,start
     if g:os == "Windows"
         set guifont=Consolas:h14:cANSI 
     elseif g:os == "Linux"
-        set guifont=Hack 12
+        set guifont=Fira\ Code\ 12
     endif
 end
 
@@ -39,7 +39,7 @@ augroup my_files
     autocmd FileType python setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
         \ syn keyword pythonSelf self |
-        \ highlight def link pythonSelf Directory
+        \ highlight def link pythonSelf Special
     " HTML
     autocmd FileType xml,html setlocal autoindent noexpandtab |
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2 |
