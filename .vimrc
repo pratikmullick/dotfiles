@@ -2,7 +2,7 @@
 syntax on
 set number
 set nowrap
-colorscheme desert
+colorscheme default
 highlight Visual cterm=reverse
 highlight ColorColumn ctermbg=4
 filetype plugin indent on
@@ -18,19 +18,17 @@ endif
 
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
-    colorscheme blandon
-    set guioptions -=T  "Disables the toolbar
-    set backspace=indent,eol,start
+    " Change colorscheme here according to the one you have downloaded.
+    colorscheme desert
+    set guioptions -=T  " Disables the toolbar
+    set backspace=indent,eol,start " Keys correction in Windows.
     if g:os == "Windows"
         set guifont=Consolas:h14:cANSI 
     elseif g:os == "Linux"
-<<<<<<< HEAD
-        set guifont=Fira\ Code\ 12
-=======
+        " Make sure Hack font is installed, or change it to preferred font.
         set guifont=Hack\ 12
->>>>>>> ed7f951f76ac32561d815560676e0e19d91e4462
     endif
-end
+endif
 
 " FileType Options
 augroup my_files
