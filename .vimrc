@@ -45,7 +45,8 @@ augroup my_files
     " HTML
     autocmd FileType xml,html setlocal autoindent noexpandtab |
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2 |
-        \ setlocal nonumber
+        \ setlocal nonumber |
+        \ iabbrev </ </<C-X><C-O>
     " C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2 cc=80
