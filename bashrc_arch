@@ -3,6 +3,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Check window size after each command, and update values
+shopt -s checkwinsize
+
 # Color and clearscreen aliases
 alias ls='ls --color=auto --block-size=K'
 alias grep='grep --color'
