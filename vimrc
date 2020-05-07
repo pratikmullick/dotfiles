@@ -6,6 +6,8 @@ colorscheme default
 highlight Visual cterm=reverse
 highlight ColorColumn ctermbg=4
 filetype plugin indent on
+set noerrorbells
+set vb t_vb=
 
 " Checks for Operating System
 if !exists("g:os")
