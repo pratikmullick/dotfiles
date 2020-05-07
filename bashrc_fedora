@@ -6,19 +6,17 @@
 # Check window size after each command, and update values
 shopt -s checkwinsize
 
-# Color and clearscreen aliases
-alias ls='ls --color=auto --block-size=K'
-alias grep='grep --color'
-alias cls='clear'
+# Avoid succesive duplicates in the bash command history.
+export HISTCONTROL=ignoredups
 
 # Local user paths
 PATH=~/bin:$PATH
 
 # Prompt variables.
-root_="\[\e[1;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \\$ "
+root_="\[\e[2;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \\$ "
 user_="\[\e[1;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;36m\]\W\[\e[m\] > "
 
-# Change PS1 Prompt values.
+# Change PS1 Prompt values according to username
 if [ $USER = root ]
 then
     PS1=$root_
@@ -26,3 +24,10 @@ else
     PS1=$user_
 fi
 
+# Source .bash_aliases if they exist
+if [ -f ~/.bash_aliases ]; then
+    source ~/.bash_aliases
+fi
+
+# Set default editor to vim
+export EDITOR=vim
