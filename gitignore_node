@@ -1,0 +1,14 @@
+#Git Ignore for Python
+
+# Ignore VSCode directory
+.vscode/
+
+# Ignore swap files (made by GVim)
+*.swp
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore Package Lock file autocreated by NPM
+package-lock.json
+
