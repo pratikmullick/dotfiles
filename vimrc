@@ -6,8 +6,13 @@ colorscheme default
 highlight Visual cterm=reverse
 highlight ColorColumn ctermbg=4
 filetype plugin indent on
-set noerrorbells
-set vb t_vb=
+
+" Executing Pathogen Plugin Manager
+execute pathogen#infect('bundle/{}')
+
+" New splits occur below, and to the right.
+set splitbelow 
+set splitright
 
 " Checks for Operating System
 if !exists("g:os")
@@ -44,11 +49,12 @@ augroup my_files
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
         \ syn keyword pythonSelf self |
         \ highlight def link pythonSelf Special
-    " HTML
-    autocmd FileType xml,html setlocal autoindent noexpandtab |
-        \ setlocal tabstop=2 softtabstop=2 shiftwidth=2 |
-        \ setlocal nonumber |
-        \ iabbrev </ </<C-X><C-O>
+    " HTML / HandleBars
+    autocmd FileType xml,html,hbs setlocal autoindent noexpandtab |
+        \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    " CSS
+    autocmd FileType css setlocal autoindent noexpandtab |
+        \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2 cc=80
