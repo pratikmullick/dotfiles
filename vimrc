@@ -48,7 +48,7 @@ augroup my_files
         \ setlocal spell spelllang=en_us nonumber
     " Markdown
     autocmd FileType markdown setlocal autoindent noexpandtab |
-        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 |
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 tw=79 |
         \ setlocal spell spelllang=en_us nonumber
     " Python
     autocmd FileType python setlocal autoindent expandtab |
