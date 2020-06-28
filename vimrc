@@ -1,18 +1,16 @@
-" Basic Options
+" Default Options
+set encoding=utf-8
 syntax on
+filetype plugin indent on
 set number
 set nowrap
 colorscheme default
 highlight Visual cterm=reverse
-highlight ColorColumn ctermbg=4
-filetype plugin indent on
+highlight ColorColumn ctermbg=2
+set splitbelow splitright
 
-" Executing Pathogen Plugin Manager
-execute pathogen#infect('bundle/{}')
-
-" New splits occur below, and to the right.
-set splitbelow 
-set splitright
+" Toggle NERDTree Window
+nmap <silent> <F3> :NERDTreeToggle<CR>
 
 " Checks for Operating System
 if !exists("g:os")
@@ -23,36 +21,41 @@ if !exists("g:os")
     endif
 endif
 
+" Use F3 to toggle NerdTree plugin. Linux Only. Remove for Windows.
+
+
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
     " Change colorscheme here according to the one you have downloaded.
-    colorscheme blandon 
-    set guioptions -=T  " Disables the toolbar
-    set backspace=indent,eol,start " Keys correction in Windows.
+    colorscheme zellner
+    set guioptions -=T  " Disables the toolbar 
     if g:os == "Windows"
+        set backspace=indent,eol,start " Keys correction in Windows.
         set guifont=Consolas:h14:cANSI 
     elseif g:os == "Linux"
         " Make sure Hack font is installed, or change it to preferred font.
         set guifont=Hack\ 14
+        autocmd VimEnter * NERDTree 
     endif
 endif
 
+
 " FileType Options
 augroup my_files
-    autocmd!
     " Plaintext
     autocmd FileType text setlocal autoindent noexpandtab |
         \ setlocal tabstop=8 softtabstop=8 shiftwidth=8 cc=80 tw=79 |
+        \ setlocal spell spelllang=en_us nonumber
+    " Markdown
+    autocmd FileType markdown setlocal autoindent noexpandtab |
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 |
         \ setlocal spell spelllang=en_us nonumber
     " Python
     autocmd FileType python setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
         \ syn keyword pythonSelf self |
         \ highlight def link pythonSelf Special
-    " HTML / HandleBars
-    autocmd FileType xml,html,hbs setlocal autoindent noexpandtab |
-        \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    " CSS
+   " CSS
     autocmd FileType css setlocal autoindent noexpandtab |
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " C / C++
