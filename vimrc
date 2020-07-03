@@ -4,12 +4,21 @@ syntax on
 filetype plugin indent on
 set number
 set nowrap
-colorscheme default
-highlight Visual cterm=reverse
+highlight Visual cterm=reverse gui=reverse
 highlight ColorColumn ctermbg=2
+
+" Set splits to the right and bottom always
 set splitbelow splitright
 
-" Toggle NERDTree Window
+" Disable backup files
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Disable bells and pings
+set noerrorbells visualbell t_vb=
+
+" Toggles NERDTree Window
 nmap <silent> <F3> :NERDTreeToggle<CR>
 
 " Checks for Operating System
@@ -21,17 +30,16 @@ if !exists("g:os")
     endif
 endif
 
-" Use F3 to toggle NerdTree plugin. Linux Only. Remove for Windows.
-
-
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
     " Change colorscheme here according to the one you have downloaded.
-    colorscheme zellner
+    " colorscheme zellner
+    colorscheme advantage
     set guioptions -=T  " Disables the toolbar 
     if g:os == "Windows"
         set backspace=indent,eol,start " Keys correction in Windows.
-        set guifont=Consolas:h14:cANSI 
+        set guifont=Consolas:h14:cANSI
+        au GUIEnter * simalt ~x " Enters GVim Maximized
     elseif g:os == "Linux"
         " Make sure Hack font is installed, or change it to preferred font.
         set guifont=Hack\ 14
