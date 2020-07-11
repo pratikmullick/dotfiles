@@ -13,7 +13,7 @@ export HISTCONTROL=ignoredups
 PATH=~/bin:$PATH
 
 # Prompt variables.
-root_="\[\e[2;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \\$ "
+root_="\[\e[2;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;36m\]\W\[\e[m\] \\$ "
 user_="\[\e[1;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[1;36m\]\W\[\e[m\] > "
 
 # Change PS1 Prompt values according to username
