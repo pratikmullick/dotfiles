@@ -10,3 +10,4 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
+# Custom commands based on distro.
