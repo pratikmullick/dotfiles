@@ -2,6 +2,7 @@
 
 # Color and clearscreen aliases
 alias ls='ls --color=auto --block-size=K'
+alias ll='ls -l'
 alias grep='grep --color'
 alias cls='clear'
 
