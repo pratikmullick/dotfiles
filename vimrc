@@ -34,7 +34,6 @@ endif
 if has("gui_running")
     " Change colorscheme here according to the one you have downloaded.
     colorscheme zellner
-    " colorscheme advantage
     set guioptions -=T  " Disables the toolbar 
     if g:os == "Windows"
         set backspace=indent,eol,start " Keys correction in Windows.
@@ -68,7 +67,7 @@ augroup my_files
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
-        \ setlocal tabstop=8 cc=80
+        \ setlocal tabstop=4 cc=80
     " JavaScript
     autocmd FileType javascript setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 |
