@@ -1,0 +1,86 @@
+# Font Configuration
+font:
+  size: 10
+  normal:
+    family: Fira Mono
+    style: Regular
+  bold:
+    family: Fira Mono
+  italic:
+    family: Fira Mono
+
+# Schemes
+schemes:
+  # Breeze Light
+  breeze_light: &light
+    primary:
+      background: '#fafafa'
+      foreground: '#383a42'
+      dim_foreground: '#44424c'
+      dim_background: '#e6e6e6'
+      bright_foreground: '#1c1a24'
+      bright_background: '#ffffff'
+    normal:
+      black: '#383a42'
+      red: '#e4564a'
+      green: '#50a050'
+      yellow: '#c28402'
+      blue: '#0070d4'
+      magenta: '#a62684'
+      cyan: '#0a96b4'
+      white: '#fafafa'
+    bright:
+      black: '#1c1a24'
+      red: '#f83636'
+      green: '#50c850'
+      yellow: '#de6602'
+      blue: '#005ce8'
+      magenta: '#ba0eb7'
+      cyan: '#00aac8'
+      white: '#ffffff'
+    dim:
+      black: '#44424c'
+      red: '#c6605e'
+      green: '#648c64'
+      yellow: '#ae9802'
+      blue: '#1484c0'
+      magenta: '#885488'
+      cyan: '#1eaaa1'
+      white: '#e6e6e6'
+  # Breeze Dark
+  breeze_light: &dark
+    primary:
+      background: '#232627'
+      foreground: '#fcfcfc'
+      dim_foreground: '#eff0f1'
+      dim_background: '#31363b'
+      bright_foreground: '#ffffff'
+      bright_background: '#000000'
+    normal:
+      black: '#232627'
+      red: '#ed1515'
+      green: '#11d117'
+      yellow: '#f67400'
+      blue: '#1d9af3'
+      magenta: '#9c59b6'
+      cyan: '#1abc9c'
+      white: '#fcfcfc'
+    bright:
+      black: '#7f8c8d'
+      red: '#c0392b'
+      green: '#1cdc99'
+      yellow: '#fdbc4b'
+      blue: '#3daee9'
+      magenta: '#8e44ad'
+      cyan: '#16a085'
+      white: '#ffffff'
+    dim:
+      black: '#3a3b3b'
+      red: '#783228'
+      green: '#17a262'
+      yellow: '#b65519'
+      blue: '#1b668f'
+      magenta: '#614a73'
+      cyan: '#186c60'
+      white: '#63686d'
+colors: *light
