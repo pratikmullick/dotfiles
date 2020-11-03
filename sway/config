@@ -4,7 +4,7 @@
 set $mod Mod1
 
 # Scaling output for best results
-output eDP-1 scale 1.25 
+output eDP-1 scale 1.5
 
 # Home row direction keys, like vim
 set $left h
@@ -58,7 +58,8 @@ client.placeholder      #000000   #0c0c0c   #ffffff    #000000     #0c0c0c
 client.background       #ffffff
 
 # Wallpaper
-output "*" bg "/home/pratik/Pictures/4K_Wallpapers/iphone_x_wall_droidviews_29.png" fill
+# Enter filename here with full path
+# output "*" bg "<filename>" fill
 
 ### Key Combinations and Shortcuts
 
@@ -74,6 +75,7 @@ bindsym $mod+d exec $menu
 
 # Start Browser
 bindsym $mod+i exec firefox
+bindsym $mod+o exec falkon -platform wayland
 
 # Drag floating windows by holding down $mod and left mouse button(Normal mouse behaviour).
 floating_modifier $mod normal
