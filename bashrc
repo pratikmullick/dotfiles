@@ -29,6 +29,9 @@ if [ -f ~/.bash_aliases ]; then
     source ~/.bash_aliases
 fi
 
+# Using external files to set aliases
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bashenv ]] && . ~/.bashenv
 
 # Set default editor to vim
 export EDITOR=vim
