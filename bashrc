@@ -33,5 +33,3 @@ fi
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bashenv ]] && . ~/.bashenv
 
-# Set default editor to vim
-export EDITOR=vim

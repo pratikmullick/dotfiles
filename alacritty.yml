@@ -12,7 +12,7 @@ font:
 # Schemes
 schemes:
   # Breeze Light
-  breeze_light: &light
+  breeze_light: &breeze_light
     primary:
       background: '#fafafa'
       foreground: '#383a42'
@@ -48,7 +48,7 @@ schemes:
       cyan: '#1eaaa1'
       white: '#e6e6e6'
   # Breeze Dark
-  breeze_light: &dark
+  breeze_light: &breeze_dark
     primary:
       background: '#232627'
       foreground: '#fcfcfc'
@@ -83,4 +83,4 @@ schemes:
       magenta: '#614a73'
       cyan: '#186c60'
       white: '#63686d'
-colors: *light
+colors: *breeze_dark
