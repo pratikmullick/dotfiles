@@ -3,7 +3,7 @@
 # Setting ALT key as the main modifier
 set $mod Mod1
 
-# Scaling output for best results
+# Scaling output for best results (Change eDP-1 to Display name)
 output eDP-1 scale 1.5
 
 # Home row direction keys, like vim
