@@ -67,7 +67,7 @@ augroup my_files
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
-        \ setlocal tabstop=4 cc=80
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth= 4 cc=80
     " JavaScript
     autocmd FileType javascript setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 |
