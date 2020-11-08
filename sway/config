@@ -13,7 +13,7 @@ set $up k
 set $right l
 
 # Preferred terminal emulator
-set $term alacritty
+set $term kitty
 
 # Sets the DMenu to run program
 # set $menu dmenu_path | bemenu | swaymsg exec --
