@@ -12,9 +12,6 @@ HISTCONTROL=ignoredups:erasedups
 # Append to history file when Shell exits
 shopt -s histappend
 
-# Add each command to history file
-PROMPT_COMMAND="history -a;history -c;history -r;$PROMPT_COMMAND"
-
 # Local user paths
 PATH=~/bin:$PATH
 
