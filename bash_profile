@@ -7,5 +7,10 @@
 # TTY sources bashrc
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+# If .ttycolor is found, runs setvtrgb on it.
+[[ -f ~/.ttycolor ]] && setvtrgb ~/.ttycolor
+clear
+
+
 # Disable bell (PC Speaker)
 # set term --blength 0 		** LINE HAS ERROR. DO NOT USE.
