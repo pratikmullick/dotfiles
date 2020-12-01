@@ -15,6 +15,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+" Disable Undo files
+set noundofile
+
 " Disable bells and pings
 set noerrorbells visualbell t_vb=
 
@@ -37,7 +40,7 @@ if has("gui_running")
     set guioptions -=T  " Disables the toolbar 
     if g:os == "Windows"
         set backspace=indent,eol,start " Keys correction in Windows.
-        set guifont=Consolas:h14:cANSI
+        set guifont=Consolas:h12:cANSI
         au GUIEnter * simalt ~x " Enters GVim Maximized
     elseif g:os == "Linux"
         " Make sure Hack font is installed, or change it to preferred font.
@@ -55,7 +58,7 @@ augroup my_files
         \ setlocal spell spelllang=en_us nonumber
     " Markdown
     autocmd FileType markdown setlocal autoindent expandtab |
-        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 tw=79 |
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 |
         \ setlocal spell spelllang=en_us nonumber
     " Python
     autocmd FileType python setlocal autoindent expandtab |
@@ -67,7 +70,7 @@ augroup my_files
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
-        \ setlocal tabstop=4 softtabstop=4 shiftwidth= 4 cc=80
+        \ setlocal tabstop=4 cc=80
     " JavaScript
     autocmd FileType javascript setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 |
