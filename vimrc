@@ -55,11 +55,15 @@ augroup my_files
     " Plaintext
     autocmd FileType text setlocal autoindent noexpandtab |
         \ setlocal tabstop=8 softtabstop=8 shiftwidth=8 cc=80 tw=79 |
-        \ setlocal spell spelllang=en_us nonumber
+        \ setlocal spell spelllang=en_gb nonumber
     " Markdown
     autocmd FileType markdown setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 |
         \ setlocal spell spelllang=en_us nonumber
+    " TeX and LaTeX (Set spelllang according to document)
+    autocmd FileType tex setlocal autoindent expandtab |
+        \ setlocal tabstop=2 shiftwidth=2 cc=80 tw=79 |
+        \ setlocal spell 
     " Python
     autocmd FileType python setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
@@ -70,7 +74,7 @@ augroup my_files
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
     " C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
-        \ setlocal tabstop=4 cc=80
+        \ setlocal tabstop=4 shiftwidth=4 cc=80
     " JavaScript
     autocmd FileType javascript setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 |
