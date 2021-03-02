@@ -28,9 +28,14 @@ nmap <silent> <F3> :NERDTreeToggle<CR>
 if !exists("g:os")
     if has("win64") || has("win32")
         let g:os = "Windows"
-    else
+    else        
         let g:os = substitute(system('uname'), '\n', '', '')
     endif
+endif
+
+" Checks for Darwin based systems.
+if g:os == "Darwin"
+    set guifont=SF\ Mono:h16
 endif
 
 " Checks for GUI and sets GUI font and colorscheme
@@ -45,7 +50,11 @@ if has("gui_running")
     elseif g:os == "Linux"
         " Make sure Hack font is installed, or change it to preferred font.
         set guifont=Hack\ 14
-        autocmd VimEnter * NERDTree 
+        autocmd VimEnter * NERDTree
+    elseif g:os == "Darwin"
+        " Changing font to Menlo for safety reasons. SF Mono and other fonts
+        " can be installed as well.
+        setfont guifont=Menlo:h14
     endif
 endif
 
@@ -58,7 +67,7 @@ augroup my_files
         \ setlocal spell spelllang=en_gb nonumber
     " Markdown
     autocmd FileType markdown setlocal autoindent expandtab |
-        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 |
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 tw=79 |
         \ setlocal spell spelllang=en_us nonumber
     " TeX and LaTeX (Set spelllang according to document)
     autocmd FileType tex setlocal autoindent expandtab |
