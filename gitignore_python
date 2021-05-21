@@ -27,3 +27,9 @@ Scripts/
 
 # Ignore test.py
 # test.py
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore Package Lock file autocreated by NPM
+package-lock.json
