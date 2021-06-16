@@ -27,13 +27,6 @@ else
     PS1=$user_
 fi
 
-# Source .bash_aliases if they exist
-if [ -f ~/.bash_aliases ]; then
-    source ~/.bash_aliases
-fi
-
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bashenv ]] && . ~/.bashenv
 
-# Set default editor to vim
-export EDITOR=vim
