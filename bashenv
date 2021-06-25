@@ -1,3 +1,5 @@
+# Default environment variables
 export EDITOR=vim
-export MOZ_ENABLE_WAYLAND=1
+
+# Distro and installation-specific environment variables.
 

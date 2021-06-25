@@ -6,6 +6,7 @@ set number
 set nowrap
 highlight Visual cterm=reverse gui=reverse
 highlight ColorColumn ctermbg=2
+set clipboard=unnamed
 
 " Set splits to the right and bottom always
 set splitbelow splitright

@@ -12,9 +12,6 @@ HISTCONTROL=ignoredups:erasedups
 # Append to history file when Shell exits
 shopt -s histappend
 
-# Local user paths
-PATH=~/bin:$PATH
-
 # Prompt variables.
 root_="\[\e[1;31m\]\u\[\e[m\]@\[\e[1:32m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\] \\$ "
 user_="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \\$ "
@@ -27,6 +24,7 @@ else
     PS1=$user_
 fi
 
+# If these files are available, execute them
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bashenv ]] && . ~/.bashenv
 
