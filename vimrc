@@ -34,19 +34,21 @@ if !exists("g:os")
     endif
 endif
 
-" Checks for Darwin based systems.
-if g:os == "Darwin"
-    set guifont=SF\ Mono:h16
-endif
-
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
     " Change colorscheme here according to the one you have downloaded.
     colorscheme zellner
-    set guioptions -=T  " Disables the toolbar 
+    " Disables the toolbar
+    set guioptions -=T
     if g:os == "Windows"
-        set backspace=indent,eol,start " Keys correction in Windows.
-        set guifont=Consolas:h12:cANSI
+        " Keys correction in Windows.
+        set backspace=indent,eol,start
+        " Use these options for WSL2. Commented out for portability.
+        " set shell=C:\Windows\Sysnative\wsl.exe -d <distro> -u <username>
+        " set shellpipe=|
+        " set shellredir=>
+        " set shellcmdflag=
+        set guifont=Source\ Code\ Pro:h12
         au GUIEnter * simalt ~x " Enters GVim Maximized
     elseif g:os == "Linux"
         " Make sure Hack font is installed, or change it to preferred font.
