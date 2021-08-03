@@ -6,6 +6,8 @@ set number
 set nowrap
 highlight Visual cterm=reverse gui=reverse
 highlight ColorColumn ctermbg=2
+
+" Sets clipboard as unnamed to transmit data between OS and Vim
 set clipboard=unnamed
 
 " Set splits to the right and bottom always
@@ -33,6 +35,15 @@ if !exists("g:os")
         let g:os = substitute(system('uname'), '\n', '', '')
     endif
 endif
+
+" Plugins. (Section to be disabled until vim-plug is installed using:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Plugins will be downloaded under the specified directory.
+" call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'lervag/vimtex'
+" call plug#end()
 
 " Checks for GUI and sets GUI font and colorscheme
 if has("gui_running")
@@ -73,9 +84,9 @@ augroup my_files
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 tw=79 |
         \ setlocal spell spelllang=en_us nonumber
     " TeX and LaTeX (Set spelllang according to document)
-    autocmd FileType tex setlocal autoindent expandtab |
+    autocmd FileType tex setlocal autoindent expandtab nonumber|
         \ setlocal tabstop=2 shiftwidth=2 cc=80 tw=79 |
-        \ setlocal spell 
+        \ setlocal spell
     " Python
     autocmd FileType python setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
