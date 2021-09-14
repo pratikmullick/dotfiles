@@ -1,7 +1,7 @@
 # Pratik's configuration for Sway
 
 # Setting Winkey key as the main modifier
-set $mod super
+set $mod Mod4
 
 # Scaling output for best results (Change eDP-1 to Display name)
 output eDP-1 scale 1.5
@@ -22,7 +22,7 @@ set $menu dmenu_path | dmenu-wl | xargs swaymsg exec --
 # Touchpad Settings
 input "1267:47:Elan_Touchpad" {
 	tap enabled
-	natural_scroll disabled
+	natural_scroll enabled
 	pointer_accel 0.5
 }
 
@@ -75,7 +75,7 @@ bindsym $mod+d exec $menu
 
 # Start Browser
 bindsym $mod+i exec firefox
-bindsym $mod+o exec falkon -platform wayland
+bindsym $mod+o exec chromium
 
 # Drag floating windows by holding down $mod and left mouse button(Normal mouse behaviour).
 floating_modifier $mod normal
