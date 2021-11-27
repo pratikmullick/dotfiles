@@ -33,3 +33,6 @@ node_modules/
 
 # Ignore Package Lock file autocreated by NPM
 package-lock.json
+
+# Ignore locally generated certificates
+cert/
