@@ -1,6 +1,8 @@
 # DOTFILES
 This is my personal collection of dotfiles. The repository contains the following files:
 
+## Configuration Files
+
 - **alacritty.yml**:
     - Destination: `$HOME/.alacritty.yml`
     - Dependencies: Hack TTF Font
@@ -53,3 +55,9 @@ This is my personal collection of dotfiles. The repository contains the followin
 - **zshrc**
     - Destination: `$HOME/.zshrc`
     - Comments: Tested on macOS. Does not work as of now on Linux.
+
+## Scripts
+The executable flag is disabled by default for all scripts.
+
+- **vimplug.sh**
+    - Comments: Downloads vimplug plugin manager for Vim.

@@ -27,27 +27,21 @@ set noerrorbells visualbell t_vb=
 " Toggles NERDTree Window
 nmap <silent> <F3> :NERDTreeToggle<CR>
 
-" Plugins. Section to be disabled until vim-plug is installed using:
-" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-"   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-" Plugins will be downloaded under the specified directory.
-"
+" # Plugins
+" # Use vimplug.sh (for UNIX) or vimplug.ps1 (for Windows) to install vimplug.
+" # Enable the following sections after installation.
 " call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-" Python
+" # Python
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-"
-" JavaScript, TypeScript and React
+" # JavaScript, TypeScript and React
 " Plug 'pangloss/vim-javascript'
 " Plug 'leafgarland/typescript-vim'
 " Plug 'maxmellon/vim-jsx-pretty'
-"
-" LaTeX
+" # LaTeX
 " Plug 'lervag/vimtex'
-"
-" NerdTree File Browser, Auto-Commenter
+" # NerdTree File Browser, Auto-Commenter
 " Plug 'preservim/nerdtree'
 " Plug 'tpope/vim-commentary'
-"
 " call plug#end()
 
 " Checks for GUI and sets GUI font and colorscheme
