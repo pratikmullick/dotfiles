@@ -33,6 +33,7 @@ nmap <silent> <F3> :NERDTreeToggle<CR>
 " call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " # Python
 " Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'davidhalter/jedi-vim'
 " # JavaScript, TypeScript and React
 " Plug 'pangloss/vim-javascript'
 " Plug 'leafgarland/typescript-vim'
