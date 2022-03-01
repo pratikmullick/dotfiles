@@ -2,12 +2,12 @@
 font:
   size: 12
   normal:
-    family: Hack
+    family: monospace
     style: Regular
   bold:
-    family: Hack
+    family: monospace
   italic:
-    family: Hack
+    family: monospace
 
 # Schemes
 schemes:
@@ -134,4 +134,4 @@ schemes:
       magenta: '#6c71c4' # violet
       cyan: '#93a1a1' # base1
       white: '#fdf6e3' # base3
-colors: *solarized_dark
+colors: *breeze_dark
