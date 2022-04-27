@@ -13,15 +13,17 @@ HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
 # Prompt variables.
-root_="\[\e[1;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\] \\$ "
-user_="\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\] \[\e[1;34m\]\W\[\e[m\] \\$ "
+root_color="\[\e[1;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\] \\$ "
+user_color="[\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]] \[\e[34m\]\W\[\e[m\] \\$ "
+root_std="[\u@\h] \W \\$ "
+user_std="[\u@\h] \W \\$ "
 
 # Change PS1 Prompt values according to username
 if [ $USER = root ]
 then
-    PS1=$root_
+    PS1=$root_std
 else
-    PS1=$user_
+    PS1=$user_color
 fi
 
 # If these files are available, execute them

@@ -91,10 +91,16 @@ augroup my_files
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
         \ setlocal tabstop=4 shiftwidth=4 cc=80
     " JavaScript
-    autocmd FileType javascript setlocal autoindent expandtab |
+    autocmd FileType javascript,javascriptreact setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 |
         \ syn keyword javaScriptOf of |
         \ highlight def link javaScriptOf Repeat
+    " HTML
+    autocmd FileType html setlocal autoindent noexpandtab |
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
+    " XML
+    autocmd FileType xml setlocal autoindent noexpandtab |
+        \setlocal tabstop=4 softtabstop=4 shiftwidth=4
     " Shell/Vim Config
     autocmd FileType vim,sh setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4
