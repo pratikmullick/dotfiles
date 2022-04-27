@@ -1,10 +1,10 @@
 # Pratik's configuration for Sway
 
-# Setting Winkey key as the main modifier
-set $mod Mod4
+# Setting modifier key (Use Mod1 for Alt, Mod4 for Super)
+set $mod Mod1
 
 # Scaling output for best results (Change eDP-1 to Display name)
-output eDP-1 scale 1.5
+output eDP-1 scale 1.50
 
 # Home row direction keys, like vim
 set $left h
@@ -17,7 +17,7 @@ set $term alacritty
 
 # Sets the DMenu to run program
 # set $menu dmenu_path | bemenu | swaymsg exec --
-set $menu dmenu_path | dmenu-wl | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show=drun | xargs swaymsg exec --
 
 # Touchpad Settings
 input "1267:47:Elan_Touchpad" {
@@ -32,39 +32,15 @@ exec swayidle -w \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
 
-# Sway Bar
-bar {
-	colors	{
-		statusline #ffffff
-		background #00000088
-	}
-	position top
-	status_command while ~/.sway/swaybar.sh; do sleep 1; done
-	font pango:Cantarell Bold 12
-}
-
-# Font Settings
-font pango:Cantarell Bold 12
-# Window Title Settings
-title_align center
-
-# Color Settings
-# class                 border    backgr.   text       indicator   child_border
-client.focused          #9c215aaa #9c215aaa #ffff00    #2e9ef4aa   #285577aa
-client.focused_inactive #333333   #5f676a   #ffffff    #484e50     #5f676a
-client.unfocused        #33333300 #22222200 #afafaf    #292d2e00   #22222200
-client.urgent           #2f343a   #900000   #ffffff    #900000     #900000
-client.placeholder      #000000   #0c0c0c   #ffffff    #000000     #0c0c0c
-client.background       #ffffff
-
 # Wallpaper
 # Enter filename here with full path
 # output "*" bg "<filename>" fill
-
+output * bg /usr/share/backgrounds/default.png fill
 ### Key Combinations and Shortcuts
 
-# Start URxvt and apply .Xresources
+# Start Terminal 
 bindsym $mod+Return exec $term
+# Run command if terminal is Urxvt! (Why not!)
 # exec swaymsg "workspace 1; exec xrdb ~/.Xresources"
 
 # Kill focused window
@@ -155,3 +131,56 @@ bindsym $mod+space focus mode_toggle
 # Move focus to the parent container
 bindsym $mod+a focus parent
 
+# Resizing containers:
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 10px
+    bindsym $down resize grow height 10px
+    bindsym $up resize shrink height 10px
+    bindsym $right resize grow width 10px
+
+    # Ditto, with arrow keys
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#
+# Status Bar:
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%I:%M:%S %p'; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
+# Clipboard
+exec wl-paste -t text --watch clipman store --no-persist
+
+# Window Settings
+## Font Settings
+font pango:Monospace Bold 10
+## Window Title Settings
+title_align center
+## Color Settings
+### class		border		background	text		indicator
+client.focused		#285577ff	#285577ff	#ffffff		#2e9ef4
