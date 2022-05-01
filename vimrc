@@ -14,6 +14,7 @@ set clipboard=unnamed
 set splitbelow splitright
 
 " Disable backup files
+set viminfo=""
 set nobackup
 set nowritebackup
 set noswapfile
