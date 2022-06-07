@@ -16,7 +16,7 @@ shopt -s histappend
 root_color="\[\e[1;31m\]\u\[\e[m\]@\[\e[1;32m\]\h\[\e[m\] \[\e[36m\]\W\[\e[m\] \\$ "
 user_color="[\[\e[31m\]\u\[\e[m\]@\[\e[32m\]\h\[\e[m\]] \[\e[34m\]\W\[\e[m\] \\$ "
 root_std="[\u@\h] \W \\$ "
-user_std="[\u@\h] \[\e[1;30m\]\W \[\e[m\]\$ "
+user_std="[\u@\h] \[\e[1;m\]\W \[\e[m\]\$ "
 
 # Change PS1 Prompt values according to username
 if [ $USER = root ]
