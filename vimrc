@@ -1,4 +1,6 @@
 " Default Options
+set exrc
+set secure
 set encoding=utf-8
 syntax on
 filetype plugin indent on
