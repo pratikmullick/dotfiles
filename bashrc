@@ -7,6 +7,7 @@
 shopt -s checkwinsize
 
 # Avoid succesive duplicates in the bash command history.
+export PROMPT_COMMAND='history -a'
 HISTCONTROL=ignoredups:erasedups
 
 # User specific environment
