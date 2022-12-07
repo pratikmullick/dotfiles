@@ -14,3 +14,4 @@ alias cp='cp -i'
 # Custom commands based on distro.
 # Enable for GNOME / KDE
 alias open='xdg-open'
+alias ncdu='ncdu --color off'
