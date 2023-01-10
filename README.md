@@ -63,7 +63,7 @@ This is my personal collection of dotfiles. The repository contains the followin
 
 - **smb.conf**
     - Destination: `/etc/samba/`
-    - Comments: Samba configuration file, tested with Fedora 36. For maximum
+    - Comments: Samba configuration file, tested with Fedora 36+ for maximum
       compatibility.
 
 ## Scripts
