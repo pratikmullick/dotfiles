@@ -66,8 +66,14 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Comments: Samba configuration file, tested with Fedora 36+ for maximum
       compatibility.
 
+- **gnome_terminal_breeze_light.dconf**
+    - Comments: Run the following command to insert this theme into the GNOME
+      database to add Breeze Light theme.
+      ```
+      dconf load /org/gnome/terminal/legacy/profiles:/ < <filename.dconf>
+      ```
 ## Scripts
 The executable flag is disabled by default for all scripts.
 
-- **vimplug.sh**
+- **vimplug.sh (Deprecated)**
     - Comments: Downloads vimplug plugin manager for Vim.
