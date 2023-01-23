@@ -33,13 +33,13 @@ This is my personal collection of dotfiles. The repository contains the followin
 
 - **vimcolors**
     - Destination (UNIX): `$HOME/.vim/colors`
-    - Destination (Windows): TODO
+    - Destination (Windows): `%userprofile%\vimfiles\colors`
     - Comments: The files in this directory need to be copied *inside* the
     colors directory mentioned above
 
 - **vimrc**
     - Destination (UNIX): `$HOME/.vimrc`
-    - Destination (Windows): `$HOME/_gvimrc`
+    - Destination (Windows): `%userprofile%\_gvimrc`
     - Comments: Contains all settings for Vim in one file. Doesn't work on
       Neovim.
 
