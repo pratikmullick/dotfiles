@@ -122,17 +122,20 @@ mode "resize" {
 }
 
 ### Special Buttons
-#### Audio
+#### Audio Buttons using PulseAudio (pactl)
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
+#### Screen Brightness using light
+bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec light -A 5
 ## HARDWARE SETTINGS
 
 ### Sleep and Idle Settings
 exec swayidle -w timeout 300 'swaylock -f -c 000000' \
-	timeout 305 'swaymsg "output * dpms off"' timeout 306 'systemctl suspend' resume 'swaymsg "output * dpms on"' \
+        timeout 305 'swaymsg "output * dpms off"' timeout 306 'systemctl suspend' resume 'swaymsg "output * dpms on"' \
         before-sleep 'swaylock -f -c 000000'
 
 ### Scaling output for best results (Change eDP-1 to Display name)
@@ -166,6 +169,9 @@ exec wl-paste -t text --watch clipman store --no-persist
 ### Browser
 set $browser firefox
 
+### Auto-Start Requirements Script when Sway Starts
+exec ~/.sway/swayreq.py
+
 ## VISUAL SETTINGS 
 ### Remove existing settings and copy/paste theme from sway_themes directory:
 ### Wallpaper. Default sets to Black
@@ -185,20 +191,20 @@ bar {
 
         colors {
                 statusline #ffffff
-                background #323232aa
-                focused_workspace #285577aa #285577aa #ffffffaa
-                inactive_workspace #000000aa #000000aa #ffffffaa
+                background #323232
+                focused_workspace #285577 #285577 #ffffff
+                inactive_workspace #000000 #000000 #ffffff
         }
 }
 
 #### Font Settings
-font pango:Cantarell Bold 12
+font pango:Sans Bold 12
 #### Window Title Settings
 title_align center
 ### Color Settings
 #### class              border          background      text            indicator
-client.focused          #285577aa       #285577aa       #ffffff         #2e9ef4
-client.focused_inactive #606060aa       #606060aa       #ffffff         #a9a9a9
-client.unfocused	#606060aa	#606060aa	#ffffff		#a9a9a9
-client.urgent		#ff0000aa	#ff0000aa	#ffffff		#00ff00
-client.background	#ffffffaa
+client.focused          #285577         #285577         #ffffff         #2e9ef4
+client.focused_inactive #606060         #606060         #ffffff         #a9a9a9
+client.unfocused        #606060         #606060         #ffffff         #a9a9a9
+client.urgent           #ff0000         #ff0000         #ffffff         #00ff00
+client.background       #ffffff

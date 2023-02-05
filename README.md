@@ -28,7 +28,17 @@ This is my personal collection of dotfiles. The repository contains the followin
 
 - **sway**
     - Destination: `$HOME/.sway`
-    - Dependencies: swaymsg, swayidle, swaylock, acpi, alacritty, firefox
+    - Dependencies:
+        - `swayidle`
+        - `swaylock`
+        - `clipman`
+        - `wl-paste`
+        - `alacritty`
+        - `firefox`
+        - `wofi`
+        - `pactl`
+        - `light`
+        - `acpi`
     - Comments: Tested on Linux only.
 
 - **vimcolors**
