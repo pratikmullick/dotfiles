@@ -4,8 +4,7 @@ This is my personal collection of dotfiles. The repository contains the followin
 ## Configuration Files
 
 - **alacritty.yml**:
-    - Destination: `$HOME/.alacritty.yml`
-    - Dependencies: Hack TTF Font
+    - Destination: `$HOME/.config/alacritty/alacritty.yml`
     - Comments: Tested on Linux only.
 
 - **bash files (All files starting with bash)**:
@@ -27,7 +26,7 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Comments: Used for MightEMacs
 
 - **sway**
-    - Destination: `$HOME/.sway`
+    - Destination: `$HOME/.config/sway`
     - Dependencies:
         - `swayidle`
         - `swaylock`
@@ -53,14 +52,10 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Comments: Contains all settings for Vim in one file. Doesn't work on
       Neovim.
 
-- **xres**
-    - Destination: `$HOME/.xres`
-    - Comments: Color schemes for URxvt. Needs Xresources to work.
-
 - **Xresources**
     - Destination: `$HOME/.Xresources`
-    - Dependencies: $HOME/.xres (mentioned above), Hack TTF Font
-    - Comments: Configures URxvt
+    - Comments: Configures URxvt. After making changes / running for the first
+      time, run `xrdb .Xresources`.
 
 - **zshrc**
     - Destination: `$HOME/.zshrc`
@@ -69,21 +64,11 @@ This is my personal collection of dotfiles. The repository contains the followin
 - **app_icons**
     - Destination: `$HOME/.local/share/applications`
     - Comments: Contains custom application icons for Linux desktop with
-      Wayland support. Tested on Fedora 36.
+      Wayland support. Tested on Fedora 36+. Preferably use with a full-fledged
+      DE, not a WM.
 
 - **smb.conf**
     - Destination: `/etc/samba/`
     - Comments: Samba configuration file, tested with Fedora 36+ for maximum
       compatibility.
 
-- **gnome_terminal_breeze_light.dconf**
-    - Comments: Run the following command to insert this theme into the GNOME
-      database to add Breeze Light theme.
-      ```
-      dconf load /org/gnome/terminal/legacy/profiles:/ < <filename.dconf>
-      ```
-## Scripts
-The executable flag is disabled by default for all scripts.
-
-- **vimplug.sh (Deprecated)**
-    - Comments: Downloads vimplug plugin manager for Vim.

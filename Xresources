@@ -1,9 +1,8 @@
-!! URxvt Appearance
 !! Font Settings
-URxvt.font: xft:Hack:style=Regular:size=14
-URxvt.boldFont: xft:Hack:style=Bold:size=14
-URxvt.italicFont: xft:Hack:style=Italic:size=14
-URxvt.boldItalicFont: xft:Hack:style=Bold Italic:size=14
+URxvt.font: xft:Monospace:style=Regular:size=12
+URxvt.boldFont: xft:Monospace:style=Bold:size=12
+URxvt.italicFont: xft:Monospace:style=Italic:size=12
+URxvt.boldItalicFont: xft:Monospace:style=Bold Italic:size=12
 URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.internalBorder: 10
@@ -12,4 +11,5 @@ URxvt.cursorUnderline: false
 URxvt.scrollBar: false
 URxvt.iso14755: false
 
-#include "/home/pratik/.xres/breeze_light"
+!! Use #include directive to add a colorscheme:
+!! #include "<path/to/theme/file>"
