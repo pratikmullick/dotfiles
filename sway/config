@@ -169,9 +169,6 @@ exec wl-paste -t text --watch clipman store --no-persist
 ### Browser
 set $browser firefox
 
-### Auto-Start Requirements Script when Sway Starts
-exec ~/.sway/swayreq.py
-
 ## VISUAL SETTINGS 
 ### Remove existing settings and copy/paste theme from sway_themes directory:
 ### Wallpaper. Default sets to Black
