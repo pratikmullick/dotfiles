@@ -1,0 +1,28 @@
+audio_cache_size = 4000
+bitrate = 320
+playback_state = "Stopped"
+shuffle = true
+repeat = "off"
+
+[theme]
+background = "default"
+primary = "light black"
+secondary = "green"
+title = "green"
+playing = "green"
+playing_selected = "white"
+playing_bg = "default"
+highlight = "white"
+highlight_bg = "dark green"
+error = "white"
+error_bg = "red"
+statusbar = "green"
+statusbar_progress = "green"
+statusbar_bg = "default"
+cmdline = "white"
+cmdline_bg = "default"
+search_match = "black"
+
+[credentials]
+username_cmd = "echo $KPWD | keepassxc-cli show -q -k $PWD_KEY $PWD_DB Entertainment/Spotify -a Username"
+password_cmd = "echo $KPWD | keepassxc-cli show -q -k $PWD_KEY $PWD_DB Entertainment/Spotify -a Password"

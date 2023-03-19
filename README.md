@@ -72,3 +72,7 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Comments: Samba configuration file, tested with Fedora 36+ for maximum
       compatibility.
 
+- **ncspot.toml**
+    - Destination: `$HOME/.config/ncspot/config.toml`
+    - Comments: Spotify CLI config file. Needs KeepassXC to get login
+      credentials. Only works with Spotify Premium.
