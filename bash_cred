@@ -1,0 +1,6 @@
+# Requires manual intervention.
+export PWD_KEY="/path/to/pwd/keyfile"
+export PWD_DB="/path/to/pwd/database"
+
+export KPWD="Secret"
+ 

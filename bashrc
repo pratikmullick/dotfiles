@@ -37,4 +37,4 @@ fi
 # If these files are available, execute them
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bashenv ]] && . ~/.bashenv
-
+[[ -f ~/.bash_cred ]] && . ~/.bash_cred
