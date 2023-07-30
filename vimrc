@@ -81,7 +81,8 @@ augroup my_files
     " TeX and LaTeX (Set spelllang according to document)
     autocmd FileType tex setlocal nonumber autoindent expandtab |
         \ setlocal tabstop=2 shiftwidth=2 cc=80 tw=79 |
-        \ setlocal spell nonumber
+        \ setlocal spell nonumber |
+        \ let g:tex_flavor='latex' 
     " Python
     autocmd FileType python setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
