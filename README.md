@@ -63,9 +63,9 @@ This is my personal collection of dotfiles. The repository contains the followin
 
 - **app_icons**
     - Destination: `$HOME/.local/share/applications`
-    - Comments: Contains custom application icons for Linux desktop with
-      Wayland support. Tested on Fedora 36+. Preferably use with a full-fledged
-      DE, not a WM.
+    - Comments: Contains custom application icons for Linux desktop, split into
+      two directories, `generic` and `custom`; with `custom` icons requiring
+      full path expansion.
 
 - **smb.conf**
     - Destination: `/etc/samba/`

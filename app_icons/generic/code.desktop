@@ -3,16 +3,15 @@ Name=Visual Studio Code
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
 Exec=/usr/share/code/code --enable-features=UseOzonePlatform --ozone-platform=wayland %F
-Icon=com.visualstudio.code
+Icon=code
 Type=Application
-StartupNotify=false
-StartupWMClass=Code
+StartupNotify=true
+StartupWMClass=code
+Terminal=false
 Categories=TextEditor;Development;IDE;
-MimeType=text/plain;inode/directory;application/x-code-workspace;
 Actions=new-empty-window;
-Keywords=vscode;
 
 [Desktop Action new-empty-window]
 Name=New Empty Window
 Exec=/usr/share/code/code --enable-features=UseOzonePlatform --ozone-platform=wayland --new-window %F
-Icon=com.visualstudio.code
+Icon=code
