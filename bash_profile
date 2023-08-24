@@ -11,3 +11,7 @@
 [[ -f ~/.ttycolor ]] && setvtrgb ~/.ttycolor
 clear
 
+# Runs command to generate environment variables from systemd (Linux x64 only)
+set -a
+eval "$(/usr/lib/systemd/user-environment-generators/30-systemd-environment-d-generator)"
+set +a
