@@ -30,6 +30,11 @@ set noerrorbells visualbell t_vb=
 " Toggles NERDTree Window
 nmap <silent> <F3> :NERDTreeToggle<CR>
 
+" Set color for Terminal Sessions
+if $SHELL == "/bin/bash"
+    colorscheme default
+endif
+
 " # Plugins
 " # Use vimplug.sh (for UNIX) or vimplug.ps1 (for Windows) to install vimplug.
 " # Enable the following sections after installation.
@@ -77,7 +82,7 @@ augroup my_files
     " Markdown
     autocmd FileType markdown setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 tw=79 |
-        \ setlocal spell spelllang=en_us nonumber
+        \ setlocal nonumber
     " TeX and LaTeX (Set spelllang according to document)
     autocmd FileType tex setlocal nonumber autoindent expandtab |
         \ setlocal tabstop=2 shiftwidth=2 cc=80 tw=79 |
