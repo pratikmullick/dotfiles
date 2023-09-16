@@ -76,6 +76,7 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Destination: `$HOME/.config/ncspot/config.toml`
     - Comments: Spotify CLI config file. Needs KeepassXC to get login
       credentials. Only works with Spotify Premium.
+
 - **mpv.conf**
     - Destination: `$HOME/.config/mpv/mpv.conf`
     - Comments: Adds configuration for MPV Media Player.
