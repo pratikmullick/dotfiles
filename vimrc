@@ -1,4 +1,13 @@
-" Default Options
+" # Vim and Neovim configuration file.
+" # Copyright 2023. Pratik Mullick
+" # Released in the public domain.
+" # Default Options
+" # Save to ~/.vimrc for Linux / Unix; ~/_gvimrc for Windows GVIM, ~/_vimrc for
+" # Windows VIM; ~/.config/nvim/init.vim for Neovim, and
+" # ~/.config/nvim/ginit.vim for Neovim-Qt after making the
+" # necessary changes.
+
+" # Default Options (Vim, NVim, GVim, NVim-Qt)
 set exrc
 set secure
 set encoding=utf-8
@@ -8,109 +17,77 @@ set number
 set nowrap
 highlight Visual cterm=reverse gui=reverse
 highlight ColorColumn ctermbg=2
-
-" Sets clipboard as unnamed to transmit data between OS and Vim
+" ## Sets clipboard as unnamed to transmit data between OS and Vim
 set clipboard=unnamed
-
-" Set splits to the right and bottom always
+" ## Set splits to the right and bottom always
 set splitbelow splitright
-
-" Disable backup files
-set viminfo=""
+" ## Disable backup files
+"set viminfo=""
 set nobackup
 set nowritebackup
 set noswapfile
-
-" Disable Undo files
+" ## Disable Undo files
 set noundofile
-
-" Disable bells and pings
+" ## Disable bells and pings
 set noerrorbells visualbell t_vb=
 
-" Toggles NERDTree Window
-nmap <silent> <F3> :NERDTreeToggle<CR>
+" # Checks for GUI and sets GUI font and colorscheme (Vim, GVim)
+"    " Change colorscheme here according to the one you have downloaded.
+"    colorscheme zellner
+"    set guioptions -=T  " Disables the toolbar 
+"    if has("gui_win32")
+"        set backspace=indent,eol,start " Keys correction in Windows.
+"        set guifont=Consolas:h12:cANSI
+"        au GUIEnter * simalt ~x " Enters GVim Maximized
+"    elseif has("gui_gtk2")
+"        " Make sure Hack font is installed, or change it to preferred font.
+"        set guifont=Hack\ 14
+"        autocmd VimEnter * NERDTree
+"    elseif has("gui_macvim")
+"        " Changing font to Menlo for safety reasons. SF Mono and other fonts
+"        " can be installed as well.
+"        set guifont=SF\ Mono\ Regular:h18
+"    endif
+"endif
 
-" Set color for Terminal Sessions
-if $SHELL == "/bin/bash"
-    colorscheme default
-endif
-
-" # Plugins
-" # Use vimplug.sh (for UNIX) or vimplug.ps1 (for Windows) to install vimplug.
-" # Enable the following sections after installation.
-" call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-" # Python
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-" Plug 'davidhalter/jedi-vim'
-" # JavaScript, TypeScript and React
-" Plug 'pangloss/vim-javascript'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'maxmellon/vim-jsx-pretty'
-" # LaTeX
-" Plug 'lervag/vimtex'
-" # NerdTree File Browser, Auto-Commenter
-" Plug 'preservim/nerdtree'
-" Plug 'tpope/vim-commentary'
-" call plug#end()
-
-" Checks for GUI and sets GUI font and colorscheme
-if has("gui_running")
-    " Change colorscheme here according to the one you have downloaded.
-    colorscheme zellner
-    set guioptions -=T  " Disables the toolbar 
-    if has("gui_win32")
-        set backspace=indent,eol,start " Keys correction in Windows.
-        set guifont=Consolas:h12:cANSI
-        au GUIEnter * simalt ~x " Enters GVim Maximized
-    elseif has("gui_gtk2")
-        " Make sure Hack font is installed, or change it to preferred font.
-        set guifont=Hack\ 14
-        autocmd VimEnter * NERDTree
-    elseif has("gui_macvim")
-        " Changing font to Menlo for safety reasons. SF Mono and other fonts
-        " can be installed as well.
-        set guifont=SF\ Mono\ Regular:h18
-    endif
-endif
-
-" FileType Options
+" # FileType Options
 augroup my_files
-    " Plaintext
+    " ## Plaintext
     autocmd FileType text setlocal autoindent noexpandtab |
         \ setlocal tabstop=8 softtabstop=8 shiftwidth=8 cc=80 tw=79 |
         \ setlocal spell spelllang=en_gb nonumber
-    " Markdown
+    " ## Markdown
     autocmd FileType markdown setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 tw=79 |
         \ setlocal nonumber
-    " TeX and LaTeX (Set spelllang according to document)
+    " ## TeX and LaTeX (Set spelllang according to document)
     autocmd FileType tex setlocal nonumber autoindent expandtab |
         \ setlocal tabstop=2 shiftwidth=2 cc=80 tw=79 |
         \ setlocal spell nonumber |
         \ let g:tex_flavor='latex' 
-    " Python
+    " ## Python
     autocmd FileType python setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4 cc=120 |
         \ syn keyword pythonSelf self |
         \ highlight def link pythonSelf Special
-   " CSS
+   " ## CSS
     autocmd FileType css setlocal autoindent noexpandtab |
         \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
-    " C / C++
+    " ## C / C++
     autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
         \ setlocal tabstop=4 shiftwidth=4 cc=80
-    " JavaScript
+    " ## JavaScript
     autocmd FileType javascript,javascriptreact setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 cc=80 |
         \ syn keyword javaScriptOf of |
         \ highlight def link javaScriptOf Repeat
-    " HTML
+    " ## HTML
     autocmd FileType html setlocal autoindent noexpandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
-    " XML
+    " ## XML
     autocmd FileType xml setlocal autoindent noexpandtab |
         \setlocal tabstop=4 softtabstop=4 shiftwidth=4
-    " Shell/Vim Config
+    " ## Shell/Vim Config
     autocmd FileType vim,sh setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4
 augroup END
