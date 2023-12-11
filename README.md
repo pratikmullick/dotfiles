@@ -46,12 +46,6 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Comments: The files in this directory need to be copied *inside* the
     colors directory mentioned above
 
-- **vimrc**
-    - Destination (UNIX): `$HOME/.vimrc`
-    - Destination (Windows): `%userprofile%\_gvimrc`
-    - Comments: Contains all settings for Vim in one file. Doesn't work on
-      Neovim.
-
 - **Xresources**
     - Destination: `$HOME/.Xresources`
     - Comments: Configures URxvt. After making changes / running for the first

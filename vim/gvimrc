@@ -1,0 +1,16 @@
+" # Checks for GUI and sets GUI font and colorscheme (Vim, GVim)
+" # Change colorscheme here according to the one you have downloaded.
+
+colorscheme zellner
+set guioptions -=T  " Disables the toolbar
+au GUIEnter * simalt ~x " Enters GVim Maximized
+if has("gui_win32")
+    set backspace=indent,eol,start " Keys correction in Windows.
+    set guifont=Consolas:h12:cANSI
+elseif has("gui_gtk2")
+    " Make sure Hack font is installed, or change it to preferred font.
+    set guifont=Hack\ 14
+elseif has("gui_macvim")
+    " Using SF Mono Font. Make sure to install it before use.
+    set guifont=SF\ Mono\ Regular:h18
+endif

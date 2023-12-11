@@ -52,7 +52,7 @@ set noerrorbells visualbell t_vb=
 
 " # ginit.vim specific. (NVim-Qt)
 " ## Enable Mouse
-set mouse=a
+" set mouse=a
 
 " ## Set Editor Font
 "if exists(':GuiFont')
