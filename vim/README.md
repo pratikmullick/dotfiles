@@ -30,7 +30,7 @@ directory is as follows.
 
 ### NeoVim (Including NeoVim Qt)
 - **Windows** : `%USERPROFILE%\AppData\Local\nvim\colors`
-- **Linux**   : TBD
+- **Linux**   : ~/.config/nvim
 - **Mac OS**  : TBD
 - **BSD**     : TBD
 
