@@ -2,11 +2,6 @@
 This is my personal collection of dotfiles. The repository contains the following files:
 
 ## Configuration Files
-
-- **alacritty.yml**:
-    - Destination: `$HOME/.config/alacritty/alacritty.yml`
-    - Comments: Tested on Linux only.
-
 - **bash files (All files starting with bash)**:
     - Destination: `$HOME`
     - Script: `$ for FILE in bash*; do cp $FILE $HOME/.$FILE; done`
@@ -40,11 +35,30 @@ This is my personal collection of dotfiles. The repository contains the followin
         - `acpi`
     - Comments: Tested on Linux only.
 
-- **vimcolors**
-    - Destination (UNIX): `$HOME/.vim/colors`
-    - Destination (Windows): `%userprofile%\vimfiles\colors`
-    - Comments: The files in this directory need to be copied *inside* the
-    colors directory mentioned above
+- **Wofi**
+    - Destination: `$HOME/.config/wofi`
+
+- **alacritty.yml**:
+    - Destination: `$HOME/.config/alacritty/alacritty.yml`
+    - Comments: Tested on Linux only.
+
+- **Vim / Neovim**
+    - Destination:
+        - Vim:
+            - Windows: \_vimrc and \_gvimrc
+            - Linux / UNIX: .vimrc and .gvimrc
+        - Neovim:
+            - Windows: `%userprofile%\Local\nvim\`
+            - Linux: `$HOME/.config/nvim/`
+
+- **Vim / Neovim Colors**
+    - Destination:
+        - Vim:
+            - Windows: `%userprofile%\vimfiles\colors`
+            - Linux / UNIX: `$HOME/.vim/colors`
+        - Neovim
+            - Windows: `%userprofile%\Local\nvim-data\colors`
+            - Linux: `$HOME/.config/nvim/colors`
 
 - **Xresources**
     - Destination: `$HOME/.Xresources`
@@ -55,12 +69,6 @@ This is my personal collection of dotfiles. The repository contains the followin
     - Destination: `$HOME/.zshrc`
     - Comments: Tested on macOS. Does not work as of now on Linux.
 
-- **app_icons**
-    - Destination: `$HOME/.local/share/applications`
-    - Comments: Contains custom application icons for Linux desktop, split into
-      two directories, `generic` and `custom`; with `custom` icons requiring
-      full path expansion.
-
 - **smb.conf**
     - Destination: `/etc/samba/`
     - Comments: Samba configuration file, tested with Fedora 36+ for maximum
@@ -68,8 +76,9 @@ This is my personal collection of dotfiles. The repository contains the followin
 
 - **ncspot.toml**
     - Destination: `$HOME/.config/ncspot/config.toml`
-    - Comments: Spotify CLI config file. Needs KeepassXC to get login
-      credentials. Only works with Spotify Premium.
+    - Dependencies: KeepassXC
+    - Comments: Spotify CLI config file. credentials.
+      Only works with Spotify Premium.
 
 - **mpv.conf**
     - Destination: `$HOME/.config/mpv/mpv.conf`

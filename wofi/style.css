@@ -1,0 +1,95 @@
+/* Define Colors Here */
+/* Catppuccin Latte Blue Here as Example */
+@define-color accent #1e66f5;
+@define-color txt #4c4f69;
+@define-color bg #eff1f5;
+@define-color bg2 #bcc0cc;
+
+ * {
+    font-family: 'Sans';
+    font-size: 12px;
+ }
+
+ /* Window */
+ window {
+    margin: 3px;
+    padding: 6px;
+    border: 3px solid @accent;
+    border-radius: 7px;
+    background-color: @bg;
+    animation: slideIn 0.5s ease-in-out both;
+ }
+
+ /* Slide In */
+ @keyframes slideIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Inner Box */
+ #inner-box {
+    margin: 3px;
+    padding: 6px;
+    border: none;
+    background-color: @bg;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Fade In */
+ @keyframes fadeIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Outer Box */
+ #outer-box {
+    margin: 3px;
+    padding: 6px;
+    border: none;
+    background-color: @bg;
+ }
+
+ /* Scroll */
+ #scroll {
+    margin: 0px;
+    padding: 6px;
+    border: none;
+ }
+
+ /* Input */
+ #input {
+    margin: 3px;
+    padding: 6px;
+    border: none;
+    color: @txt;
+    background-color: @bg2;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Text */
+ #text {
+    margin: 3px;
+    padding: 6px;
+    border: none;
+    color: @txt;
+    animation: fadeIn 0.5s ease-in-out both;
+ }
+
+ /* Selected Entry */
+ #entry:selected {
+   background-color: @accent;
+ }
+
+ #entry:selected #text {
+    color: @bg;
+ }
