@@ -1,21 +1,21 @@
 #!/bin/bash
 
-# TODO: Create bash_cred by asking for DB filename and PWD
+# Create .bash_cred.
 cred_file="$HOME/.bash_cred"
-read -p "Full path to Password Database: " PWD_DB
-read -p "Full path to Password Key File: " PWD_KEY
-read -p "Secret for Database: " KPWD
-
-cat <<EOF >$cred_file
-export PWD_DB=$PWD_DB
-export PWD_KEY=$PWD_KEY
-export KPWD=$KPWD
-EOF
-
-
-bash_dir="./bash"
+read -p "Create Bash Credentials File? (Y/N): " cred_yn
+if [[ "$cred_yn" =~ ^([yY][eE][sS]|[yY])$ ]]
+then
+    touch $cred_file
+    read -p "Full path to Password Database: " pwd_db
+    echo "export PWD_DB=$pwd_db" >> $cred_file
+    read -p "Full path to Password Key File: " pwd_key
+    echo "export PWD_KEY=$pwd_key" >> $cred_file
+    read -p "Secret for Database: " secret
+    echo "export KPWD=$secret" >> $cred_file
+fi
 
 # Copying bash files
+bash_dir="./bash"
 echo "Copying bash files"
 for file in $bash_dir/*; do
     echo "$file -> $(basename $HOME/$file)";
