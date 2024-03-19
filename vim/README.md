@@ -8,7 +8,7 @@ The NeoVim configuration consists of two files:
 
 ### Location
 - **Windows** : `%USERPROFILE%\AppData\Local\nvim`
-- **Linux**   : TBD
+- **Linux**   : `$XDG_CONFIG_HOME/nvim`
 - **Mac OS**  : TBD
 - **BSD**     : TBD
 
@@ -30,7 +30,7 @@ directory is as follows.
 
 ### NeoVim (Including NeoVim Qt)
 - **Windows** : `%USERPROFILE%\AppData\Local\nvim\colors`
-- **Linux**   : ~/.config/nvim
+- **Linux**   : `$XDG_CONFIG_HOME/nvim/colors`
 - **Mac OS**  : TBD
 - **BSD**     : TBD
 
