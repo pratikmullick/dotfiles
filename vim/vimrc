@@ -29,12 +29,12 @@ set noerrorbells visualbell t_vb=
 " # FileType Options (Vim, GVim, NVim, NVim-Qt)
 augroup my_files
     " ## Plaintext
-    autocmd FileType text setlocal autoindent noexpandtab |
-        \ setlocal tabstop=8 softtabstop=8 shiftwidth=8 cc=80 tw=79 |
+    autocmd FileType text setlocal autoindent expandtab |
+        \ setlocal tabstop=2 softtabstop=2 shiftwidth=4 cc=80 tw=79 |
         \ setlocal spell spelllang=en_gb nonumber
     " ## Markdown
     autocmd FileType markdown setlocal autoindent expandtab |
-        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4 tw=79 |
+        \ setlocal tabstop=2 softtabstop=2 shiftwidth=4 tw=79 |
         \ setlocal nonumber
     " ## TeX and LaTeX (Set spelllang according to document)
     autocmd FileType tex setlocal nonumber autoindent expandtab |
@@ -47,10 +47,10 @@ augroup my_files
         \ syn keyword pythonSelf self |
         \ highlight def link pythonSelf Special
    " ## CSS
-    autocmd FileType css setlocal autoindent noexpandtab |
-        \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
+    autocmd FileType css setlocal autoindent expandtab |
+        \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
     " ## C / C++
-    autocmd FileType c,cpp,h setlocal autoindent noexpandtab |
+    autocmd FileType c,cpp,h setlocal autoindent expandtab |
         \ setlocal tabstop=4 shiftwidth=4 cc=80
     " ## JavaScript
     autocmd FileType javascript,javascriptreact setlocal autoindent expandtab |
@@ -58,10 +58,10 @@ augroup my_files
         \ syn keyword javaScriptOf of |
         \ highlight def link javaScriptOf Repeat
     " ## HTML
-    autocmd FileType html setlocal autoindent noexpandtab |
+    autocmd FileType html setlocal autoindent expandtab |
         \ setlocal tabstop=4 softtabstop=4 shiftwidth=4
     " ## XML
-    autocmd FileType xml setlocal autoindent noexpandtab |
+    autocmd FileType xml setlocal autoindent expandtab |
         \setlocal tabstop=4 softtabstop=4 shiftwidth=4
     " ## Shell/Vim Config
     autocmd FileType vim,sh setlocal autoindent expandtab |
