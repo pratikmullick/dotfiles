@@ -31,7 +31,7 @@ augroup my_files
     " Document Files
     " ## Plaintext, markdown and LaTeX
     autocmd FileType text,markdown,tex setlocal autoindent expandtab |
-        \ setlocal tabstop=2 shiftwidth=2 cc=80 tw=79 |
+        \ setlocal tabstop=2 softtabstop=2 shiftwidth=2 cc=80 tw=79 |
         \ setlocal spell nonumber |
         \ let g:tex_flavor='latex'
 
