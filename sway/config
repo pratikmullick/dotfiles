@@ -205,3 +205,5 @@ client.focused_inactive #606060         #606060         #ffffff         #a9a9a9
 client.unfocused        #606060         #606060         #ffffff         #a9a9a9
 client.urgent           #ff0000         #ff0000         #ffffff         #00ff00
 client.background       #ffffff
+
+## DISTRO SPECIFIC SETTINGS
