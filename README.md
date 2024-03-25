@@ -27,16 +27,9 @@ following files:
 - **zshrc**
     - Destination: `$HOME/.zshrc`
     - Comments: Tested on macOS. Does not work as of now on Linux.
-- **smb.conf**
-    - Destination: `/etc/samba/`
-    - Comments: Samba configuration file, tested with Fedora 36+ for maximum
-      compatibility.
 - **ncspot.toml**
     - Destination: `$HOME/.config/ncspot/config.toml`
-    - Dependencies: KeepassXC
-    - Comments: Spotify CLI config file. credentials.
+    - Dependencies: KeepassXC for credentials.
+    - Comments: Spotify CLI config file.
       Only works with Spotify Premium.
-- **mpv.conf**
-    - Destination: `$HOME/.config/mpv/mpv.conf`
-    - Comments: Adds configuration for MPV Media Player.
 

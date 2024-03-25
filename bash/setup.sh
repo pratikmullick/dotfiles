@@ -15,10 +15,10 @@ then
 fi
 
 # Copying bash files
-bash_dir="./bash"
+bash_dir="."
 echo "Copying bash files"
-for file in $bash_dir/*; do
+for file in $bash_dir/bash*; do
     echo "$file -> $(basename $HOME/$file)";
-    cp $file $HOME/.$(basename $file);
+    cp $file "$HOME/.$(basename $file)";
 done
 
