@@ -1,0 +1,12 @@
+[window]
+# opacity = 1.0
+dynamic_title = false
+padding = { x = 5, y = 5 }
+
+[font]
+normal = { family = "monospace", style = "Regular" }
+bold = { family = "monospace", style = "Bold" }
+italic = {family = "monospace", style = "Italic" }
+bold_italic = { family = "monospace", style = "Bold Italic" }
+size = 12
+
