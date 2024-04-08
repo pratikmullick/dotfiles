@@ -6,7 +6,7 @@ set guioptions -=T  " Disables the toolbar
 au GUIEnter * simalt ~x " Enters GVim Maximized
 if has("gui_win32")
     set backspace=indent,eol,start " Keys correction in Windows.
-    set guifont=Consolas:h12:cANSI
+    set guifont=Lucida\ Console:h12:cANSI
 elseif has("gui_gtk2")
     " Make sure Hack font is installed, or change it to preferred font.
     set guifont=Hack\ 14
