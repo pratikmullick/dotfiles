@@ -20,4 +20,4 @@ The configuration file depends on these programs for intended usage:
 ## Destination:
 Given are the following default destination for following operating systems:
   - **Linux**: `$XDG_CONFIG_HOME/sway/`
-  - **Windows**: TBD
+  - **BSD**: TBD
