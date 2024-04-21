@@ -6,5 +6,5 @@ endif
 
 if has("linux")
     colorscheme zellner
-    GuiFont! SF\ Mono:h12
+    GuiFont! Hack:h12
 endif
