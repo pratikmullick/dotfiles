@@ -25,6 +25,8 @@ highlight ColorColumn ctermbg=2
 set splitbelow splitright
 " Disable bells and pings
 set noerrorbells visualbell t_vb=
+" Detect file changes
+set autoread
 
 " # FileType Options (Vim, GVim, NVim, NVim-Qt)
 augroup my_files
