@@ -1,7 +1,9 @@
+# Alacritty Configuration. Self-explanatory
 [window]
-# opacity = 1.0
 dynamic_title = false
 padding = { x = 5, y = 5 }
+dimensions = { columns = 80, lines = 24 }
+dynamic_title = false
 
 [font]
 normal = { family = "monospace", style = "Regular" }
@@ -10,3 +12,11 @@ italic = {family = "monospace", style = "Italic" }
 bold_italic = { family = "monospace", style = "Bold Italic" }
 size = 12
 
+[selection]
+save_to_clipboard = true
+
+# Ensure colors follow this format.
+# [colors.primary]
+# [colors.normal]
+# [colors.bright]
+# [colors.dim]

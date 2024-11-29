@@ -10,7 +10,7 @@ This directory contains four files:
 - **legacy_colour.yaml**: Legacy Color Format. For reference only.
 - **alacritty.toml**: Current TOML Configuration Format. For more settings,
   refer to `man 5 alacritty`.
-- **example_colour.toml**: Current Colour Format. For reference only.
+- **example_color.toml**: Current Colour Format. For reference only.
 
 ## Installation
 The configuration directory for different operating systems are as follows:
