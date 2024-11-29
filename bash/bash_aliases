@@ -15,3 +15,4 @@ alias cp='cp -i'
 # Enable for GNOME / KDE
 alias open='xdg-open'
 alias ncdu='ncdu --color off'
+alias neofetch='fastfetch --config neofetch'
