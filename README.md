@@ -4,17 +4,16 @@ following files:
 
 ## Configuration Files
 
-- **alacritty**:
+- **Alacritty**:
     - Refer to [alacritty/README.md](alacritty/README.md)
-- **bash**:
+- **Bash**:
     - Refer to [bash/README.md](bash/README.md)
-- **sway**
+- **Sway**
     - Refer to [sway/README.md](sway/README.md)
-- **Vim / Neovim**
+- **Vim**
     - Refer to [vim/README.md](vim/README.md)
-- **gitignore_python_node**
-    - Destination: Copied to any directory with Python3 virtual environment as
-    .gitignore. Also works for Node JS projects.
+- **GitIgnore**
+    - Refer to [gitignore/README.md](gitignore/README.md)
 - **memacs (Deprecated)**
     - Destination: `$HOME/.memacs`
     - Comments: Used for MightEMacs
