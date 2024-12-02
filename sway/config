@@ -18,6 +18,8 @@ bindsym $mod+d exec $menu
 bindsym $mod+i exec $browser
 ### Screenshot
 bindsym Print exec $screenshot
+### Neovim-Qt
+bindsym $mod+n exec $nvim-qt
 
 ### Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -172,10 +174,14 @@ exec wl-paste -t text --watch clipman store --no-persist
 set $browser firefox
 ### Screenshot
 set $screenshot grim
+### Neovim-Qt
+set $nvim-qt nvim-qt
 
 ## VISUAL SETTINGS 
 ### Remove existing settings and copy/paste theme from sway_themes directory:
 ### Wallpaper. Default sets to Black
+### Wallpaper. Set to image. Can be stretch, fill, fit, center, tile
+### output * bg /path/to/image.jpg fill
 output * bg #000000 solid_color
 
 ### Status Bar
