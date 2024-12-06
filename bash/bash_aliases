@@ -11,8 +11,9 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
-# Custom commands based on distro.
-# Enable for GNOME / KDE
+# Modern Linux commands
 alias open='xdg-open'
 alias ncdu='ncdu --color off'
 alias neofetch='fastfetch --config neofetch'
+alias drives="df -HT | grep -E 'ext4|btrfs|vfat|fuse*' | sort"
+
