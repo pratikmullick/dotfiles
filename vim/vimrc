@@ -46,7 +46,7 @@ augroup my_files
 
     " ## JavaScript and React
     autocmd FileType javascript,javascriptreact setlocal autoindent expandtab |
-        \ setlocal tabstop=4 shiftwidth=4 cc=120 |
+        \ setlocal tabstop=2 shiftwidth=2 cc=120 |
         \ syn keyword javaScriptOf of |
         \ highlight def link javaScriptOf Repeat
 
