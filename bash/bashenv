@@ -1,5 +1,6 @@
 # Default environment variables
 export EDITOR=vim
+export SSH_AUTH_SOCK=/dev/null
 
 # Distro and installation-specific environment variables.
 
