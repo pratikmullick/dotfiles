@@ -204,6 +204,8 @@ bar {
         }
 }
 
+#### Theme Settings (Light / Dark for GTK Apps)
+exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-Dark'
 #### Font Settings
 font pango:Sans Bold 12
 #### Window Title Settings
