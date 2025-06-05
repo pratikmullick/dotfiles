@@ -18,7 +18,32 @@ fi
 bash_dir="."
 echo "Copying bash files"
 for file in $bash_dir/bash*; do
-    echo "$file -> $(basename $HOME/$file)";
-    cp $file "$HOME/.$(basename $file)";
+    echo "$file -> $(basename $HOME/$file)"
+    cp $file "$HOME/.$(basename $file)"
 done
+
+# Create systemd environment variables from bashenv
+input_env_file="bashenv"
+output_env_dir="$HOME/.config/environment.d"
+output_env_file="bashenv.conf"
+output_env_path="${output_env_dir}/${output_env_file}"
+regex="export"
+mkdir -p "$output_env_dir"
+
+while read -r line; do
+    parsed_line=$(awk '
+        NR == 1 && substr($0, 1, 1) == "#" { next }
+        {
+            gsub("'${regex}'", "");
+            if (substr($0, 1, 1) == " ") {
+                $0 = substr($0, 2);
+        }
+        print
+    }' <<< "$line")
+    echo "$parsed_line" >> "$output_env_path"
+done < "$input_env_file"
+echo "Bash environment variables copied to ${output_env_path}."
+
+# Clean exit
+exit 0
 

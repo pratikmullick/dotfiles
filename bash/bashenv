@@ -1,6 +1,6 @@
 # Default environment variables
 export EDITOR=vim
 export SSH_AUTH_SOCK=/dev/null
+export ELECTRON_OZONE_PLATFORM_HINT=wayland
 
 # Distro and installation-specific environment variables.
-
