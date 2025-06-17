@@ -42,7 +42,7 @@ while read -r line; do
     }' <<< "$line")
     echo "$parsed_line" >> "$output_env_path"
 done < "$input_env_file"
-echo "Bash environment variables copied to ${output_env_path}."
+echo ".bashenv -> ${output_env_path}."
 
 # Clean exit
 exit 0
