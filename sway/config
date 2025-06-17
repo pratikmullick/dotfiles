@@ -19,7 +19,7 @@ bindsym $mod+i exec $browser
 ### Screenshot
 bindsym Print exec $screenshot
 ### Neovim-Qt
-bindsym $mod+n exec $nvim-qt
+bindsym $mod+n exec $editor
 
 ### Reload the configuration file
 bindsym $mod+Shift+c reload
@@ -133,8 +133,9 @@ bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 #### Screen Brightness using light
-bindsym XF86MonBrightnessDown exec light -U 5
-bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec brightnessctl -c backlight set 5%-
+bindsym XF86MonBrightnessUp exec brightnessctl -c backlight set +5%
+
 ## HARDWARE SETTINGS
 
 ### Sleep and Idle Settings
@@ -174,8 +175,8 @@ exec wl-paste -t text --watch clipman store --no-persist
 set $browser firefox
 ### Screenshot
 set $screenshot grim
-### Neovim-Qt
-set $nvim-qt nvim-qt
+### Editor
+set $editor neovide
 
 ## VISUAL SETTINGS 
 ### Remove existing settings and copy/paste theme from sway_themes directory:
