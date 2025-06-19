@@ -27,7 +27,7 @@ name='Graphics'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/Internet]
-apps=['org.gnome.Epiphany.desktop', 'microsoft-edge.desktop', 'net.thunderbird.Thunderbird.desktop', 'org.gnome.Evolution.desktop', 'de.haeckerfelix.Fragments.desktop', 'vivaldi-stable.desktop', 'org.mozilla.firefox.desktop', 'firefox.desktop', 'com.google.Chrome.desktop', 'google-chrome.desktop', 'chromium-browser.desktop', 'chromium.desktop']
+apps=['org.gnome.Epiphany.desktop', 'microsoft-edge.desktop', 'net.thunderbird.Thunderbird.desktop', 'org.mozilla.Thunderbird.desktop', 'org.gnome.Evolution.desktop', 'de.haeckerfelix.Fragments.desktop', 'vivaldi-stable.desktop', 'org.mozilla.firefox.desktop', 'firefox.desktop', 'com.google.Chrome.desktop', 'google-chrome.desktop', 'chromium-browser.desktop', 'chromium.desktop']
 name='Internet'
 translate=false
 
