@@ -1,0 +1,8 @@
+[org/gnome/TextEditor]
+indent-style='space'
+restore-session=false
+show-line-numbers=true
+show-right-margin=true
+spellcheck=false
+tab-width=uint32 4
+wrap-text=false

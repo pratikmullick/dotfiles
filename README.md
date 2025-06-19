@@ -8,6 +8,8 @@ following files:
     - Refer to [alacritty/README.md](alacritty/README.md)
 - **Bash**:
     - Refer to [bash/README.md](bash/README.md)
+- **DConf**:
+    - Refer to [dconf/README.md](dconf/README.md)
 - **Sway**
     - Refer to [sway/README.md](sway/README.md)
 - **Vim**

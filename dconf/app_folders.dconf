@@ -1,0 +1,81 @@
+[org/gnome/desktop/app-folders]
+folder-children=['Accessories', 'CLI', 'Extras', 'Games', 'Graphics', 'Internet', 'Multimedia', 'Office', 'Other', 'Productivity', 'Programming', 'System', 'Terminals', 'Utilities', 'Virtualization', 'Wine']
+
+[org/gnome/desktop/app-folders/folders/Accessories]
+apps=['org.gnome.Calculator.desktop', 'org.gnome.Weather.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Snapshot.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Characters.desktop', 'org.gnome.Connections.desktop', 'org.gnome.Maps.desktop', 'org.gnome.Contacts.desktop']
+name='Accessories'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/CLI]
+apps=['htop.desktop', 'nvim.desktop', 'mpv.desktop', 'ranger.desktop', 'vim.desktop']
+name='CLI'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Extras]
+apps=['bssh.desktop', 'bvnc.desktop', 'avahi-discover.desktop', 'org.fedoraproject.MediaWriter.desktop', 'gparted.desktop']
+name='Extras'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Games]
+apps=['org.gnome.Mines.desktop']
+name='Games'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Graphics]
+apps=['org.inkscape.Inkscape.desktop', 'gimp.desktop', 'org.gnome.Loupe.desktop', 'io.github.nokse22.asciidraw.desktop', 'org.kde.krita.desktop']
+name='Graphics'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Internet]
+apps=['org.gnome.Epiphany.desktop', 'microsoft-edge.desktop', 'net.thunderbird.Thunderbird.desktop', 'org.gnome.Evolution.desktop', 'de.haeckerfelix.Fragments.desktop', 'vivaldi-stable.desktop', 'org.mozilla.firefox.desktop', 'firefox.desktop', 'com.google.Chrome.desktop', 'google-chrome.desktop', 'chromium-browser.desktop', 'chromium.desktop']
+name='Internet'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Multimedia]
+apps=['io.github.celluloid_player.Celluloid.desktop', 'org.nicotine_plus.Nicotine.desktop', 'org.freac.freac.desktop', 'milkytracker.desktop', 'org.pulseaudio.pavucontrol.desktop', 'org.pipewire.Helvum.desktop', 'org.gnome.Rhythmbox3.desktop', 'mt32emu-qt.desktop']
+name='Multimedia'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Office]
+apps=['libreoffice-writer.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-calc.desktop', 'libreoffice-base.desktop', 'libreoffice-math.desktop']
+name='Office'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Other]
+apps=['leafpad.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'urxvtc.desktop']
+name='Other'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Productivity]
+apps=['org.gnome.TextEditor.desktop', 'org.gnome.Evince.desktop', 'nvim-qt.desktop', 'neovide.desktop', 'org.keepassxc.KeePassXC.desktop', 'org.pwmt.zathura.desktop', 'org.gnome.World.Secrets.desktop']
+name='Productivity'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Programming]
+apps=['emacs.desktop', 'code.desktop', 'org.gnome.gitg.desktop', 'cmake-gui.desktop']
+name='Programming'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['org.gnome.Software.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.tweaks.desktop', 'ca.desrt.dconf-editor.desktop', 'firewall-config.desktop', 'org.gnome.SystemMonitor.desktop', 'org.gnome.Settings.desktop', 'pcmanfm.desktop', 'xarchiver.desktop']
+name='System'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Terminals]
+apps=['cool-retro-term.desktop', 'foot.desktop', 'footclient.desktop', 'foot-server.desktop', 'org.codeberg.dnkl.foot.desktop', 'org.codeberg.dnkl.footclient.desktop', 'org.codeberg.dnkl.foot-server.desktop', 'rxvt-unicode.desktop', 'Alacritty.desktop', 'org.gnome.Ptyxis.desktop', 'org.gnome.Terminal.desktop', 'urxvt.desktop', 'urxvt-tabbed.desktop']
+name='Terminals'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.seahorse.Application.desktop', 'org.gnome.Extensions.desktop', 'org.freedesktop.GnomeAbrt.desktop', 'com.github.tchx84.Flatseal.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Logs.desktop', 'yelp.desktop', 'org.freedesktop.MalcontentControl.desktop']
+name='Utilities'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Virtualization]
+apps=['virt-manager.desktop', 'org.gnome.Boxes.desktop', 'org.dosbox-staging.dosbox-staging.desktop']
+name='Virtualization'
+translate=false
+
+[org/gnome/shell]
+app-picker-layout=[{'Accessories': <{'position': <0>}>, 'CLI': <{'position': <1>}>, 'Extras': <{'position': <2>}>, 'Games': <{'position': <3>}>, 'Graphics': <{'position': <4>}>, 'Internet': <{'position': <5>}>, 'Multimedia': <{'position': <6>}>, 'Office': <{'position': <7>}>, 'Other': <{'position': <8>}>, 'Productivity': <{'position': <9>}>, 'Programming': <{'position': <10>}>, 'System': <{'position': <11>}>, 'Terminals': <{'position': <12>}>, 'Utilities': <{'position': <13>}>, 'Virtualization': <{'position': <14>}>, 'Wine': <{'position': <15>}>}]
+favorite-apps=['org.gnome.Nautilus.desktop']
