@@ -32,12 +32,12 @@ name='Internet'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/Multimedia]
-apps=['io.github.celluloid_player.Celluloid.desktop', 'org.nicotine_plus.Nicotine.desktop', 'org.freac.freac.desktop', 'milkytracker.desktop', 'org.pulseaudio.pavucontrol.desktop', 'org.pipewire.Helvum.desktop', 'org.gnome.Rhythmbox3.desktop', 'mt32emu-qt.desktop']
+apps=['io.github.celluloid_player.Celluloid.desktop', 'org.nicotine_plus.Nicotine.desktop', 'org.freac.freac.desktop', 'milkytracker.desktop', 'org.pulseaudio.pavucontrol.desktop', 'org.pipewire.Helvum.desktop', 'org.gnome.Rhythmbox3.desktop', 'mt32emu-qt.desktop', 'puddletag.desktop']
 name='Multimedia'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/Office]
-apps=['libreoffice-writer.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-calc.desktop', 'libreoffice-base.desktop', 'libreoffice-math.desktop']
+apps=['libreoffice-writer.desktop', 'libreoffice-draw.desktop', 'libreoffice-impress.desktop', 'libreoffice-calc.desktop', 'libreoffice-startcenter.desktop', 'libreoffice-base.desktop', 'libreoffice-math.desktop']
 name='Office'
 translate=false
 
@@ -47,12 +47,12 @@ name='Other'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/Productivity]
-apps=['org.gnome.TextEditor.desktop', 'org.gnome.Evince.desktop', 'nvim-qt.desktop', 'neovide.desktop', 'org.keepassxc.KeePassXC.desktop', 'org.pwmt.zathura.desktop', 'org.gnome.World.Secrets.desktop']
+apps=['org.gnome.TextEditor.desktop', 'org.gnome.Evince.desktop', 'nvim-qt.desktop', 'neovide.desktop', 'org.keepassxc.KeePassXC.desktop', 'org.pwmt.zathura.desktop', 'org.gnome.World.Secrets.desktop', 'emacsclient.desktop']
 name='Productivity'
 translate=false
 
 [org/gnome/desktop/app-folders/folders/Programming]
-apps=['emacs.desktop', 'code.desktop', 'org.gnome.gitg.desktop', 'cmake-gui.desktop']
+apps=['emacs.desktop', 'code.desktop', 'org.gnome.gitg.desktop', 'cmake-gui.desktop', 'jconsole-java-openjdk.desktop', 'jshell-java-openjdk.desktop']
 name='Programming'
 translate=false
 
