@@ -61,8 +61,8 @@ augroup my_files
     autocmd FileType c,cpp,h setlocal autoindent expandtab |
         \ setlocal tabstop=4 shiftwidth=4 cc=80
 
-    " ## Shell/Vim Config
-    autocmd FileType vim,sh setlocal autoindent expandtab |
+    " ## Shell, PowerShell, and Vim Config
+    autocmd FileType vim,sh,ps1 setlocal autoindent expandtab |
         \ setlocal softtabstop=4 shiftwidth=4
 augroup END
 
