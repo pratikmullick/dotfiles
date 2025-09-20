@@ -1,9 +1,14 @@
 # Default environment variables
 export EDITOR=vim
 export SSH_AUTH_SOCK=/dev/null
+export GPG_TTY=$(tty)
 
+# GNOME and Wayland environment variables
 export MOZ_ENABLE_WAYLAND=1
 export ELECTRON_OZONE_PLATFORM_HINT=wayland
 export QT_QPA_PLATFORM=wayland
 
-# Distro and installation-specific environment variables.
+# Distro and installation-specific environment variables
+## ARCH LINUX
+### REQUIRES qadwaitadecorations from AUR installed.
+export QT_WAYLAND_DECORATION=adwaita
