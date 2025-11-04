@@ -12,3 +12,5 @@ export QT_QPA_PLATFORM=wayland
 ## ARCH LINUX
 ### REQUIRES qadwaitadecorations from AUR installed.
 export QT_WAYLAND_DECORATION=adwaita
+### REQUIRES qt5ct/qt6ct installed
+export QT_QPA_PLATFORMTHEME=qt5ct
